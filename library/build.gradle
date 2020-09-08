@@ -1,3 +1,7 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.flyentology'
+
 apply plugin: 'com.android.library'
 
 if (!hasProperty('DISABLE_ERROR_PRONE')) {
