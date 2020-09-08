@@ -35,7 +35,7 @@ public class GlideContext extends ContextWrapper {
   private final Map<Class<?>, TransitionOptions<?, ?>> defaultTransitionOptions;
   private final Engine engine;
   private final boolean isLoggingRequestOriginsEnabled;
-  private final int logLevel;
+  private int logLevel;
 
   @Nullable
   @GuardedBy("this")
@@ -111,6 +111,10 @@ public class GlideContext extends ContextWrapper {
 
   public int getLogLevel() {
     return logLevel;
+  }
+
+  public void setLogLevel(int logLevel) {
+    this.logLevel = logLevel;
   }
 
   @NonNull

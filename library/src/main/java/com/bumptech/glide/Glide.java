@@ -152,7 +152,7 @@ public class Glide implements ComponentCallbacks2 {
    * Returns a directory with the given name in the private cache directory of the application to
    * use to store retrieved media and thumbnails.
    *
-   * @param context A context.
+   * @param context   A context.
    * @param cacheName The name of the subdirectory in which to store the cache.
    * @see #getPhotoCacheDir(android.content.Context)
    */
@@ -212,8 +212,8 @@ public class Glide implements ComponentCallbacks2 {
 
   /**
    * @deprecated Use {@link #init(Context, GlideBuilder)} to get a singleton compatible with Glide's
-   *     generated API.
-   *     <p>This method will be removed in a future version of Glide.
+   * generated API.
+   * <p>This method will be removed in a future version of Glide.
    */
   @VisibleForTesting
   @Deprecated
@@ -625,7 +625,9 @@ public class Glide implements ComponentCallbacks2 {
     return arrayPool;
   }
 
-  /** @return The context associated with this instance. */
+  /**
+   * @return The context associated with this instance.
+   */
   @NonNull
   public Context getContext() {
     return glideContext.getBaseContext();
@@ -658,7 +660,7 @@ public class Glide implements ComponentCallbacks2 {
    * every rotation.
    *
    * @param bitmapAttributeBuilders The list of {@link Builder Builders} representing individual
-   *     sizes and configurations of {@link Bitmap}s to be pre-filled.
+   *                                sizes and configurations of {@link Bitmap}s to be pre-filled.
    */
   @SuppressWarnings("unused") // Public API
   public synchronized void preFillBitmapPool(
@@ -720,7 +722,9 @@ public class Glide implements ComponentCallbacks2 {
     engine.clearDiskCache();
   }
 
-  /** Internal method. */
+  /**
+   * Internal method.
+   */
   @NonNull
   public RequestManagerRetriever getRequestManagerRetriever() {
     return requestManagerRetriever;
@@ -775,7 +779,8 @@ public class Glide implements ComponentCallbacks2 {
    * the same vein, if the resource will be used in a view in an activity, the load should be
    * started with {@link #with(android.app.Activity)}}.
    *
-   * <p>This method is appropriate for resources that will be used outside of the normal fragment or
+   * <p>This method is appropriate for resources that will be used outside of the normal fragment
+   * or
    * activity lifecycle (For example in services, or for notification thumbnails).
    *
    * @param context Any context, will not be retained.
@@ -803,9 +808,9 @@ public class Glide implements ComponentCallbacks2 {
   }
 
   /**
-   * Begin a load with Glide that will tied to the give {@link
-   * androidx.fragment.app.FragmentActivity}'s lifecycle and that uses the given {@link
-   * androidx.fragment.app.FragmentActivity}'s default options.
+   * Begin a load with Glide that will tied to the give {@link androidx.fragment.app.FragmentActivity}'s
+   * lifecycle and that uses the given {@link androidx.fragment.app.FragmentActivity}'s default
+   * options.
    *
    * @param activity The activity to use.
    * @return A RequestManager for the given FragmentActivity that can be used to start a load.
@@ -834,8 +839,7 @@ public class Glide implements ComponentCallbacks2 {
    * @param fragment The fragment to use.
    * @return A RequestManager for the given Fragment that can be used to start a load.
    * @deprecated Prefer support Fragments and {@link #with(Fragment)} instead, {@link
-   *     android.app.Fragment} will be deprecated. See
-   *     https://github.com/android/android-ktx/pull/161#issuecomment-363270555.
+   * android.app.Fragment} will be deprecated. See https://github.com/android/android-ktx/pull/161#issuecomment-363270555.
    */
   @SuppressWarnings("deprecation")
   @Deprecated
@@ -924,10 +928,14 @@ public class Glide implements ComponentCallbacks2 {
     clearMemory();
   }
 
-  /** Creates a new instance of {@link RequestOptions}. */
+  /**
+   * Creates a new instance of {@link RequestOptions}.
+   */
   public interface RequestOptionsFactory {
 
-    /** Returns a non-null {@link RequestOptions} object. */
+    /**
+     * Returns a non-null {@link RequestOptions} object.
+     */
     @NonNull
     RequestOptions build();
   }
