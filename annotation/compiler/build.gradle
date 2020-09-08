@@ -1,6 +1,8 @@
 import org.gradle.internal.jvm.Jvm
 import proguard.gradle.ProGuardTask
 
+group='com.github.flyentology'
+
 apply plugin: 'java'
 
 configurations {
